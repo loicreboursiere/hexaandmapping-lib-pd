@@ -1,0 +1,4 @@
+0, hex-delay 1;
+1, hex-input 1;
+2, hex-output 1;
+3, hex-delay 2;
