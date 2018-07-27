@@ -1,0 +1,16 @@
+#N canvas 874 344 450 300 10;
+#X obj 85 64 osc~ 220;
+#X obj 85 105 *~;
+#X obj 85 146 outlet~;
+#X floatatom 85 39 5 0 0 0 - - -, f 5;
+#X obj 150 80 utils-line;
+#X floatatom 150 59 5 0 0 0 - - -, f 5;
+#X obj 85 16 inlet freq;
+#X obj 150 39 inlet amp;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 3 0 0 0;
+#X connect 4 0 1 1;
+#X connect 5 0 4 0;
+#X connect 6 0 3 0;
+#X connect 7 0 5 0;
