@@ -1,0 +1,29 @@
+#N canvas 181 441 371 330 10;
+#X floatatom 79 123 5 0 5000 0 speed - -, f 5;
+#X obj 13 220 inlet~;
+#X obj 21 114 cnv 5 5 5 empty empty INPUT 0 0 0 8 -262144 -66577 0
+;
+#X obj 112 115 cnv 5 5 5 empty empty SPEED 0 0 0 8 -262144 -66577 0
+;
+#X obj 82 140 hsl 27 15 0 1 0 0 empty empty dry/wet -50 7 0 10 -262144
+-1 -1 2600 1;
+#X obj 201 126 loadbang;
+#X obj 13 292 outlet~;
+#X obj 21 184 cnv 5 5 5 empty empty OUTPUT 0 0 0 8 -262144 -66577 0
+;
+#X msg 201 147 1;
+#X text 89 175 TREMOLO;
+#X obj 13 244 ../utils/utils-drywet;
+#X obj 136 267 trem~;
+#X obj 48 10 r \$1-trem-speed-in;
+#X obj 66 32 inlet trem-speed;
+#X connect 0 0 11 1;
+#X connect 1 0 10 0;
+#X connect 5 0 8 0;
+#X connect 8 0 4 0;
+#X connect 10 0 6 0;
+#X connect 10 1 11 0;
+#X connect 11 0 6 0;
+#X connect 12 0 0 0;
+#X connect 13 0 0 0;
+#X coords 0 -1 1 1 120 85 2 18 106;
