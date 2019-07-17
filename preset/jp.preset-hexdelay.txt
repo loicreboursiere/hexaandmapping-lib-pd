@@ -1,5 +1,0 @@
-preset1 1 2 3; 
-preset2 -1 -2 -3 -4 -5;
-preset3 0.1 0.2 0.3 0.4; 
-preset4 a b 1 2 c 3 d e f -4 -5 -6;
- 
