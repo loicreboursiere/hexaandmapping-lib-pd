@@ -1,0 +1,40 @@
+#N canvas 0 0 1280 777 10;
+#X obj 127 314 fx-reverb~;
+#X obj 60 278 inlet~;
+#X obj 127 341 outlet~;
+#X floatatom 234 145 5 0 1 0 roomsize - -, f 5;
+#X floatatom 233 166 5 0 1 0 damping - -, f 5;
+#X obj 233 188 hsl 27 15 0 1 0 0 empty empty dry/wet -50 7 0 10 -262144
+-1 -1 1300 1;
+#X text 195 225 MONO_REVERB;
+#X obj 413 208 loadbang;
+#X msg 413 229 0.5;
+#X obj 129 50 inlet roomsize;
+#X obj 246 49 inlet damping;
+#X obj 348 49 inlet dw;
+#X obj 130 21 r \$1-roomsize-in;
+#X obj 243 21 r \$1-damping-in;
+#X obj 347 22 r \$1-dw-in;
+#X obj 142 107 cnv 5 10 4 empty empty INPUT 0 0 0 8 -262144 -66577
+0;
+#X obj 173 107 cnv 5 5 5 empty empty ROOMSIZE 0 0 0 8 -262144 -66577
+0;
+#X obj 222 106 cnv 5 5 5 empty empty DAMP 0 1 0 8 -262144 -66577 0
+;
+#X obj 421 289 cnv 5 5 5 empty empty DW -162 -181 0 8 -262144 -66577
+0;
+#X obj 261 106 cnv 5 5 5 empty empty DW 0 0 0 8 -262144 -66577 0;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 3 0 0 1;
+#X connect 4 0 0 2;
+#X connect 5 0 0 3;
+#X connect 7 0 8 0;
+#X connect 8 0 5 0;
+#X connect 9 0 3 0;
+#X connect 10 0 4 0;
+#X connect 11 0 5 0;
+#X connect 12 0 3 0;
+#X connect 13 0 4 0;
+#X connect 14 0 5 0;
+#X coords 0 -1 1 1 139 147 2 138 98;

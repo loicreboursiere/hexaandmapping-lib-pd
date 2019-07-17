@@ -1,0 +1,42 @@
+#N canvas 0 0 1280 777 10;
+#X obj 178 349 freeverb~;
+#X msg 262 54 roomsize \$1;
+#X msg 261 115 damping \$1;
+#X msg 257 185 wet \$1;
+#X msg 256 206 dry \$1;
+#X obj 580 163 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -4032
+-1 -1 12700 1;
+#X floatatom 577 182 5 0 0 0 - - -, f 5;
+#X obj 317 189 expr 1-$f1;
+#X obj 387 33 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -4034
+-1 -1 0 1;
+#X obj 510 91 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -260097
+-1 -1 0 1;
+#X floatatom 507 111 5 0 0 0 - - -, f 5;
+#X floatatom 384 58 5 0 0 0 - - -, f 5;
+#X text 627 190 Wet signal to dry signal ratio;
+#X text 627 206 (0 : all dry \, 1 : all wet);
+#X text 558 111 Damping level;
+#X text 436 56 Roomize;
+#X obj 128 117 inlet~;
+#X obj 387 11 inlet;
+#X obj 510 69 inlet;
+#X obj 580 141 inlet;
+#X obj 178 381 outlet~;
+#X connect 0 0 20 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 5 0 6 0;
+#X connect 5 0 3 0;
+#X connect 5 0 7 0;
+#X connect 7 0 4 0;
+#X connect 8 0 1 0;
+#X connect 8 0 11 0;
+#X connect 9 0 2 0;
+#X connect 9 0 10 0;
+#X connect 16 0 0 0;
+#X connect 17 0 8 0;
+#X connect 18 0 9 0;
+#X connect 19 0 5 0;

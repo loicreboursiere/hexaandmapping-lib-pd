@@ -1,4 +1,4 @@
-#N canvas 537 127 1166 682 10;
+#N canvas 0 22 1280 681 10;
 #X declare -path abs;
 #N canvas 0 50 450 300 OSC 0;
 #X obj 95 21 mrpeach/udpreceive 5000;
@@ -21,44 +21,58 @@
 #X obj 1071 8 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X text 1089 9 Global OSC;
-#N canvas 383 124 450 300 abs-creation 0;
-#N canvas 1170 567 243 286 menu 0;
+#N canvas 609 166 450 392 abs-creation 0;
+#N canvas 2312 257 243 309 menu 0;
 #X obj 27 74 r open-modules;
-#N canvas 911 496 606 518 modules_selection 1;
+#N canvas 1361 71 606 702 modules_selection 1;
 #X obj 2 8 cnv 15 600 30 empty empty MODULES 270 12 0 14 -260386 -262144
 0;
 #X obj 2 64 cnv 15 180 15 empty empty FX: 10 8 0 12 -158136 -262144
 0;
-#X obj 131 88 bng 15 250 50 0 \$0-create-mono-delay empty delay 20
-7 0 10 -262144 -1 -1;
+#X obj 114 87 bng 15 250 50 0 \$0-create-mono-delay empty mono-delay
+20 7 0 10 -262144 -1 -1;
 #X obj 3 88 bng 15 250 50 0 \$0-create-hex-delay empty hex-delay 20
 7 0 10 -262144 -1 -1;
-#X obj 212 64 cnv 15 180 15 empty empty INPUT_OUTPUT: 10 8 0 12 -158136
+#X obj 242 64 cnv 15 180 15 empty empty INPUT_OUTPUT: 10 8 0 12 -158136
 -262144 0;
-#X obj 213 88 bng 15 250 50 0 \$0-create-hex-input empty in-hex~ 20
+#X obj 243 88 bng 15 250 50 0 \$0-create-hex-input empty in-hex~ 20
 7 0 10 -262144 -1 -1;
-#X obj 312 88 bng 15 250 50 0 \$0-create-mono-input empty mono-input
+#X obj 342 88 bng 15 250 50 0 \$0-create-mono-input empty mono-input
 20 7 0 10 -262144 -1 -1;
-#X obj 213 108 bng 15 250 50 0 \$0-create-hex-output empty out-hex~ 
+#X obj 243 108 bng 15 250 50 0 \$0-create-hex-output empty out-hex~ 
 20 7 0 10 -262144 -1 -1;
-#X obj 312 108 bng 15 250 50 0 \$0-create-mono-output empty mono-output
+#X obj 342 108 bng 15 250 50 0 \$0-create-mono-output empty mono-output
 20 7 0 10 -262144 -1 -1;
 #X obj 3 108 bng 15 250 50 0 \$0-create-hex-disto empty hex-disto 20
 7 0 10 -262144 -1 -1;
 #X obj 3 128 bng 15 250 50 0 \$0-create-hex-octafuzz empty hex-octafuzz
 20 7 0 10 -262144 -1 -1;
-#X obj 131 128 bng 15 250 50 0 \$0-create-mono-octafuzz empty octafuzz
+#X obj 114 128 bng 15 250 50 0 \$0-create-mono-octafuzz empty mono-octafuzz
 20 7 0 10 -262144 -1 -1;
 #X obj 3 148 bng 15 250 50 0 \$0-create-hex-tremolo empty hex-tremolo
 20 7 0 10 -262144 -1 -1;
-#X obj 131 148 bng 15 250 50 0 \$0-create-mono-tremolo empty tremolo
+#X obj 114 148 bng 15 250 50 0 \$0-create-mono-tremolo empty mono-tremolo
 20 7 0 10 -262144 -1 -1;
-#X obj 212 164 cnv 15 180 15 empty empty SYNTHESIS: 10 8 0 12 -158136
+#X obj 243 164 cnv 15 180 15 empty empty SYNTHESIS: 10 8 0 12 -158136
 -262144 0;
-#X obj 313 188 bng 15 250 50 0 \$0-create-synth-osc-mono empty osc-mono~
+#X obj 344 188 bng 15 250 50 0 \$0-create-synth-osc-mono empty osc-mono~
 20 7 0 10 -262144 -1 -1;
-#X obj 213 188 bng 15 250 50 0 \$0-create-synth-osc-hex empty osc-hex~
+#X obj 244 188 bng 15 250 50 0 \$0-create-synth-osc-hex empty osc-hex~
 20 7 0 10 -262144 -1 -1;
+#X obj 3 169 bng 15 250 50 0 \$0-create-hex-ringmod empty hex-ringmod
+17 7 0 10 -262144 -1 -1;
+#X obj 114 168 bng 15 250 50 0 \$0-create-mono-ringmod empty mono-ringmod
+17 7 0 10 -262144 -1 -1;
+#X obj 114 107 bng 15 250 50 0 \$0-create-mono-disto empty mono-disto
+17 7 0 10 -262144 -1 -1;
+#X obj 3 191 bng 15 250 50 0 \$0-create-hex-phaser empty hex-phaser
+17 7 0 10 -262144 -1 -1;
+#X obj 114 190 bng 15 250 50 0 \$0-create-mono-phaser empty mono-phaser
+17 7 0 10 -262144 -1 -1;
+#X obj 3 215 bng 15 250 50 0 \$0-create-hex-reverb empty hex-reverb
+17 7 0 10 -262144 -1 -1;
+#X obj 114 213 bng 15 250 50 0 \$0-create-mono-reverb empty mono-reverb
+17 7 0 10 -262144 -1 -1;
 #X restore 26 48 pd modules_selection;
 #X msg 27 95 1;
 #X msg 27 116 \; pd-modules_selection vis \$1;
@@ -80,7 +94,7 @@
 #X obj 83 316 pack s f;
 #X msg 177 60 0;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 1 256;
+-262144 -1 -1 1 256 0;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -133,7 +147,7 @@
 #X obj 83 316 pack s f;
 #X msg 177 60 0;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 2 256;
+-262144 -1 -1 1 256 0;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -186,7 +200,7 @@
 #X obj 83 316 pack s f;
 #X msg 177 60 0;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 1 256;
+-262144 -1 -1 1 256 0;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -239,7 +253,7 @@
 #X obj 83 316 pack s f;
 #X msg 177 60 0;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
+-262144 -1 -1 0 256 0;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -295,7 +309,7 @@
 #X obj 83 316 pack s f;
 #X msg 177 60 0;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 2 256;
+-262144 -1 -1 0 256 0;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -348,7 +362,7 @@
 #X obj 83 316 pack s f;
 #X msg 177 60 0;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 4 256;
+-262144 -1 -1 0 256 0;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -391,8 +405,8 @@
 #X connect 22 0 7 0;
 #X restore 163 19 pd synth-osc-mono~;
 #X restore 7 58 pd synthesis;
-#N canvas 242 97 450 300 fx 0;
-#N canvas 114 232 671 620 fx-del-mono~ 0;
+#N canvas 714 177 450 392 fx 0;
+#N canvas 606 36 671 643 fx-del-mono~ 0;
 #X msg 64 84 bang;
 #X obj 64 151 t b b b;
 #X obj 162 168 f;
@@ -403,7 +417,7 @@
 #X obj 83 316 pack s f;
 #X msg 177 60 0;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 3 256;
+-262144 -1 -1 5 256 0;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -456,7 +470,7 @@
 #X obj 83 316 pack s f;
 #X msg 177 60 0;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 3 256;
+-262144 -1 -1 4 256 0;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -498,7 +512,7 @@
 #X connect 20 0 0 0;
 #X connect 22 0 7 0;
 #X restore 172 67 pd fx-octafuzz-mono~;
-#N canvas 114 232 671 620 fx-del-hex~ 0;
+#N canvas 103 22 671 666 fx-del-hex~ 0;
 #X msg 64 84 bang;
 #X obj 64 151 t b b b;
 #X obj 162 168 f;
@@ -509,7 +523,7 @@
 #X obj 83 316 pack s f;
 #X msg 177 60 0;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 6 256;
+-262144 -1 -1 2 256 0;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -551,7 +565,7 @@
 #X connect 19 0 0 0;
 #X connect 22 0 7 0;
 #X restore 33 27 pd fx-del-hex~;
-#N canvas 114 232 671 620 fx-disto-hex~ 0;
+#N canvas 0 22 671 643 fx-disto-hex~ 0;
 #X msg 64 84 bang;
 #X obj 64 151 t b b b;
 #X obj 162 168 f;
@@ -562,7 +576,7 @@
 #X obj 83 316 pack s f;
 #X msg 177 60 0;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 2 256;
+-262144 -1 -1 3 256 0;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -615,7 +629,7 @@
 #X obj 83 316 pack s f;
 #X msg 177 60 0;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 4 256;
+-262144 -1 -1 6 256 0;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -657,7 +671,7 @@
 #X connect 21 0 0 0;
 #X connect 22 0 7 0;
 #X restore 33 67 pd fx-octafuzz-hex~;
-#N canvas 114 232 671 620 fx-trem-hex~ 0;
+#N canvas 1280 22 1920 1036 fx-trem-hex~ 0;
 #X msg 64 84 bang;
 #X obj 64 151 t b b b;
 #X obj 162 168 f;
@@ -668,7 +682,7 @@
 #X obj 83 316 pack s f;
 #X msg 177 60 0;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 1 256;
+-262144 -1 -1 11 256 0;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -681,8 +695,8 @@
 #X msg 83 340 \; pd-default_playground.pd obj 200 200 \$1 \$2;
 #X msg 250 171 \; pd-default_playground.pd editmode 1;
 #X obj 64 17 r \$0-create-hex-tremolo;
-#X msg 83 235 fx-trem-hex~;
-#X obj 64 562 s pd-fx-trem-hex~.pd;
+#X msg 83 235 fx-tremolo-hex~;
+#X obj 64 561 s pd-fx-tremolo-hex~.pd;
 #X connect 0 0 1 0;
 #X connect 0 0 5 0;
 #X connect 1 0 10 0;
@@ -710,7 +724,7 @@
 #X connect 21 0 0 0;
 #X connect 22 0 7 0;
 #X restore 33 87 pd fx-trem-hex~;
-#N canvas 114 232 671 620 fx-trem-mono~ 0;
+#N canvas 88 30 671 620 fx-trem-mono~ 0;
 #X msg 64 84 bang;
 #X obj 64 151 t b b b;
 #X obj 162 168 f;
@@ -721,7 +735,7 @@
 #X obj 83 316 pack s f;
 #X msg 177 60 0;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 1 256;
+-262144 -1 -1 7 256 0;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -734,8 +748,8 @@
 #X msg 83 340 \; pd-default_playground.pd obj 200 200 \$1 \$2;
 #X obj 64 17 r \$0-create-mono-tremolo;
 #X msg 250 171 \; pd-default_playground.pd editmode 1;
-#X msg 83 235 fx-trem-mono~;
-#X obj 64 562 s pd-fx-trem-mono~.pd;
+#X msg 83 235 fx-tremolo-mono~;
+#X obj 64 562 s pd-fx-tremolo-mono~.pd;
 #X connect 0 0 1 0;
 #X connect 0 0 5 0;
 #X connect 1 0 10 0;
@@ -763,6 +777,377 @@
 #X connect 20 0 0 0;
 #X connect 22 0 7 0;
 #X restore 172 87 pd fx-trem-mono~;
+#N canvas 584 27 450 618 fx-disto-mono~ 0;
+#X msg 100 -627 bang;
+#X obj 100 -560 t b b b;
+#X obj 198 -543 f;
+#X obj 227 -543 + 1;
+#X obj 198 -454 + 1;
+#X obj 259 -610 delay 250;
+#X obj 259 -588 t b b;
+#X obj 119 -395 pack s f;
+#X msg 213 -651 0;
+#X obj 198 -431 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0
+10 -262144 -1 -1 8 256 0;
+#X obj 100 -324 t b b;
+#X msg 100 -202 loadbang;
+#X obj 127 -300 s SAVE-S;
+#X obj 100 -249 delay 100;
+#X obj 344 -395 f;
+#X obj 344 -433 loadbang;
+#X obj 198 -412 t f f;
+#X msg 259 -500 \; pd-modules_selection vis 0;
+#X obj 213 -673 r \$0-reset;
+#X msg 119 -371 \; pd-default_playground.pd obj 200 200 \$1 \$2;
+#X msg 286 -540 \; pd-default_playground.pd editmode 1;
+#X obj 100 -694 r \$0-create-mono-disto;
+#X obj 100 -149 s pd-fx-disto-mono~.pd;
+#X msg 119 -476 fx-disto-mono~;
+#X connect 0 0 1 0;
+#X connect 0 0 5 0;
+#X connect 1 0 10 0;
+#X connect 1 1 23 0;
+#X connect 1 2 2 0;
+#X connect 2 0 3 0;
+#X connect 2 0 4 0;
+#X connect 3 0 2 1;
+#X connect 4 0 9 0;
+#X connect 5 0 6 0;
+#X connect 6 1 20 0;
+#X connect 7 0 19 0;
+#X connect 8 0 2 1;
+#X connect 8 0 9 0;
+#X connect 9 0 16 0;
+#X connect 10 0 13 0;
+#X connect 10 1 12 0;
+#X connect 11 0 22 0;
+#X connect 13 0 11 0;
+#X connect 14 0 2 1;
+#X connect 15 0 14 0;
+#X connect 16 0 7 1;
+#X connect 16 1 14 1;
+#X connect 18 0 8 0;
+#X connect 21 0 0 0;
+#X connect 23 0 7 0;
+#X restore 171 47 pd fx-disto-mono~;
+#N canvas 0 22 1280 681 fx-ringmod-hex~ 0;
+#X msg 64 84 bang;
+#X obj 64 151 t b b b;
+#X obj 162 168 f;
+#X obj 191 168 + 1;
+#X obj 162 257 + 1;
+#X obj 223 101 delay 250;
+#X obj 223 123 t b b;
+#X obj 83 316 pack s f;
+#X msg 177 60 0;
+#X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+-262144 -1 -1 10 256 0;
+#X obj 64 387 t b b;
+#X msg 64 509 loadbang;
+#X obj 91 411 s SAVE-S;
+#X obj 64 462 delay 100;
+#X obj 308 316 f;
+#X obj 308 278 loadbang;
+#X obj 162 299 t f f;
+#X msg 223 211 \; pd-modules_selection vis 0;
+#X obj 177 38 r \$0-reset;
+#X msg 83 340 \; pd-default_playground.pd obj 200 200 \$1 \$2;
+#X msg 250 171 \; pd-default_playground.pd editmode 1;
+#X obj 64 17 r \$0-create-hex-ringmod;
+#X msg 83 235 fx-ringmod-hex~;
+#X obj 65 561 s pd-fx-ringmod-hex~.pd;
+#X connect 0 0 1 0;
+#X connect 0 0 5 0;
+#X connect 1 0 10 0;
+#X connect 1 1 22 0;
+#X connect 1 2 2 0;
+#X connect 2 0 3 0;
+#X connect 2 0 4 0;
+#X connect 3 0 2 1;
+#X connect 4 0 9 0;
+#X connect 5 0 6 0;
+#X connect 6 1 20 0;
+#X connect 7 0 19 0;
+#X connect 8 0 2 1;
+#X connect 8 0 9 0;
+#X connect 9 0 16 0;
+#X connect 10 0 13 0;
+#X connect 10 1 12 0;
+#X connect 11 0 23 0;
+#X connect 13 0 11 0;
+#X connect 14 0 2 1;
+#X connect 15 0 14 0;
+#X connect 16 0 7 1;
+#X connect 16 1 14 1;
+#X connect 18 0 8 0;
+#X connect 21 0 0 0;
+#X connect 22 0 7 0;
+#X restore 32 110 pd fx-ringmod-hex~;
+#N canvas 88 30 671 620 fx-ringmod-mono~ 0;
+#X msg 64 84 bang;
+#X obj 64 151 t b b b;
+#X obj 162 168 f;
+#X obj 191 168 + 1;
+#X obj 162 257 + 1;
+#X obj 223 101 delay 250;
+#X obj 223 123 t b b;
+#X obj 83 316 pack s f;
+#X msg 177 60 0;
+#X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+-262144 -1 -1 10 256 0;
+#X obj 64 387 t b b;
+#X msg 64 509 loadbang;
+#X obj 91 411 s SAVE-S;
+#X obj 64 462 delay 100;
+#X obj 308 316 f;
+#X obj 308 278 loadbang;
+#X obj 162 299 t f f;
+#X msg 223 211 \; pd-modules_selection vis 0;
+#X obj 177 38 r \$0-reset;
+#X msg 83 340 \; pd-default_playground.pd obj 200 200 \$1 \$2;
+#X msg 250 171 \; pd-default_playground.pd editmode 1;
+#X obj 64 17 r \$0-create-mono-ringmod;
+#X msg 83 235 fx-ringmod-mono~;
+#X obj 64 562 s pd-fx-ringmod-mono~.pd;
+#X connect 0 0 1 0;
+#X connect 0 0 5 0;
+#X connect 1 0 10 0;
+#X connect 1 1 22 0;
+#X connect 1 2 2 0;
+#X connect 2 0 3 0;
+#X connect 2 0 4 0;
+#X connect 3 0 2 1;
+#X connect 4 0 9 0;
+#X connect 5 0 6 0;
+#X connect 6 1 20 0;
+#X connect 7 0 19 0;
+#X connect 8 0 2 1;
+#X connect 8 0 9 0;
+#X connect 9 0 16 0;
+#X connect 10 0 13 0;
+#X connect 10 1 12 0;
+#X connect 11 0 23 0;
+#X connect 13 0 11 0;
+#X connect 14 0 2 1;
+#X connect 15 0 14 0;
+#X connect 16 0 7 1;
+#X connect 16 1 14 1;
+#X connect 18 0 8 0;
+#X connect 21 0 0 0;
+#X connect 22 0 7 0;
+#X restore 171 110 pd fx-ringmod-mono~;
+#N canvas 0 22 1280 681 fx-phaser-hex~ 0;
+#X msg 107 -393 bang;
+#X obj 107 -326 t b b b;
+#X obj 205 -309 f;
+#X obj 234 -309 + 1;
+#X obj 205 -220 + 1;
+#X obj 266 -376 delay 250;
+#X obj 266 -354 t b b;
+#X obj 126 -161 pack s f;
+#X msg 220 -417 0;
+#X obj 205 -197 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0
+10 -262144 -1 -1 8 256 0;
+#X obj 107 -90 t b b;
+#X msg 107 32 loadbang;
+#X obj 134 -66 s SAVE-S;
+#X obj 107 -15 delay 100;
+#X obj 351 -161 f;
+#X obj 351 -199 loadbang;
+#X obj 205 -178 t f f;
+#X msg 266 -266 \; pd-modules_selection vis 0;
+#X obj 220 -439 r \$0-reset;
+#X msg 126 -137 \; pd-default_playground.pd obj 200 200 \$1 \$2;
+#X msg 293 -306 \; pd-default_playground.pd editmode 1;
+#X obj 107 -460 r \$0-create-hex-phaser;
+#X msg 126 -242 fx-phaser-hex~;
+#X obj 108 84 s pd-fx-phaser-hex~.pd;
+#X connect 0 0 1 0;
+#X connect 0 0 5 0;
+#X connect 1 0 10 0;
+#X connect 1 1 22 0;
+#X connect 1 2 2 0;
+#X connect 2 0 3 0;
+#X connect 2 0 4 0;
+#X connect 3 0 2 1;
+#X connect 4 0 9 0;
+#X connect 5 0 6 0;
+#X connect 6 1 20 0;
+#X connect 7 0 19 0;
+#X connect 8 0 2 1;
+#X connect 8 0 9 0;
+#X connect 9 0 16 0;
+#X connect 10 0 13 0;
+#X connect 10 1 12 0;
+#X connect 11 0 23 0;
+#X connect 13 0 11 0;
+#X connect 14 0 2 1;
+#X connect 15 0 14 0;
+#X connect 16 0 7 1;
+#X connect 16 1 14 1;
+#X connect 18 0 8 0;
+#X connect 21 0 0 0;
+#X connect 22 0 7 0;
+#X restore 31 134 pd fx-phaser-hex~;
+#N canvas 506 22 671 643 fx-phaser-mono~ 0;
+#X msg 64 84 bang;
+#X obj 64 151 t b b b;
+#X obj 162 168 f;
+#X obj 191 168 + 1;
+#X obj 162 257 + 1;
+#X obj 223 101 delay 250;
+#X obj 223 123 t b b;
+#X obj 83 316 pack s f;
+#X msg 177 60 0;
+#X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+-262144 -1 -1 11 256 0;
+#X obj 64 387 t b b;
+#X msg 64 509 loadbang;
+#X obj 91 411 s SAVE-S;
+#X obj 64 462 delay 100;
+#X obj 308 316 f;
+#X obj 308 278 loadbang;
+#X obj 162 299 t f f;
+#X msg 223 211 \; pd-modules_selection vis 0;
+#X obj 177 38 r \$0-reset;
+#X msg 83 340 \; pd-default_playground.pd obj 200 200 \$1 \$2;
+#X msg 250 171 \; pd-default_playground.pd editmode 1;
+#X obj 64 17 r \$0-create-mono-phaser;
+#X msg 83 235 fx-phaser-mono~;
+#X obj 64 562 s pd-fx-phaser-mono~.pd;
+#X connect 0 0 1 0;
+#X connect 0 0 5 0;
+#X connect 1 0 10 0;
+#X connect 1 1 22 0;
+#X connect 1 2 2 0;
+#X connect 2 0 3 0;
+#X connect 2 0 4 0;
+#X connect 3 0 2 1;
+#X connect 4 0 9 0;
+#X connect 5 0 6 0;
+#X connect 6 1 20 0;
+#X connect 7 0 19 0;
+#X connect 8 0 2 1;
+#X connect 8 0 9 0;
+#X connect 9 0 16 0;
+#X connect 10 0 13 0;
+#X connect 10 1 12 0;
+#X connect 11 0 23 0;
+#X connect 13 0 11 0;
+#X connect 14 0 2 1;
+#X connect 15 0 14 0;
+#X connect 16 0 7 1;
+#X connect 16 1 14 1;
+#X connect 18 0 8 0;
+#X connect 21 0 0 0;
+#X connect 22 0 7 0;
+#X restore 170 134 pd fx-phaser-mono~;
+#N canvas 0 22 1280 681 fx-reverb-hex~ 0;
+#X msg 107 -393 bang;
+#X obj 107 -326 t b b b;
+#X obj 205 -309 f;
+#X obj 234 -309 + 1;
+#X obj 205 -220 + 1;
+#X obj 266 -376 delay 250;
+#X obj 266 -354 t b b;
+#X obj 126 -161 pack s f;
+#X msg 220 -417 0;
+#X obj 205 -197 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0
+10 -262144 -1 -1 11 256 0;
+#X obj 107 -90 t b b;
+#X msg 107 32 loadbang;
+#X obj 134 -66 s SAVE-S;
+#X obj 107 -15 delay 100;
+#X obj 351 -161 f;
+#X obj 351 -199 loadbang;
+#X obj 205 -178 t f f;
+#X msg 266 -266 \; pd-modules_selection vis 0;
+#X obj 220 -439 r \$0-reset;
+#X msg 126 -137 \; pd-default_playground.pd obj 200 200 \$1 \$2;
+#X msg 293 -306 \; pd-default_playground.pd editmode 1;
+#X obj 107 -460 r \$0-create-hex-reverb;
+#X msg 126 -242 fx-reverb-hex~;
+#X obj 108 84 s pd-fx-reverb-hex~.pd;
+#X connect 0 0 1 0;
+#X connect 0 0 5 0;
+#X connect 1 0 10 0;
+#X connect 1 1 22 0;
+#X connect 1 2 2 0;
+#X connect 2 0 3 0;
+#X connect 2 0 4 0;
+#X connect 3 0 2 1;
+#X connect 4 0 9 0;
+#X connect 5 0 6 0;
+#X connect 6 1 20 0;
+#X connect 7 0 19 0;
+#X connect 8 0 2 1;
+#X connect 8 0 9 0;
+#X connect 9 0 16 0;
+#X connect 10 0 13 0;
+#X connect 10 1 12 0;
+#X connect 11 0 23 0;
+#X connect 13 0 11 0;
+#X connect 14 0 2 1;
+#X connect 15 0 14 0;
+#X connect 16 0 7 1;
+#X connect 16 1 14 1;
+#X connect 18 0 8 0;
+#X connect 21 0 0 0;
+#X connect 22 0 7 0;
+#X restore 31 157 pd fx-reverb-hex~;
+#N canvas 506 22 671 643 fx-reverb-mono~ 0;
+#X msg 64 84 bang;
+#X obj 64 151 t b b b;
+#X obj 162 168 f;
+#X obj 191 168 + 1;
+#X obj 162 257 + 1;
+#X obj 223 101 delay 250;
+#X obj 223 123 t b b;
+#X obj 83 316 pack s f;
+#X msg 177 60 0;
+#X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+-262144 -1 -1 16 256 0;
+#X obj 64 387 t b b;
+#X msg 64 509 loadbang;
+#X obj 91 411 s SAVE-S;
+#X obj 64 462 delay 100;
+#X obj 308 316 f;
+#X obj 308 278 loadbang;
+#X obj 162 299 t f f;
+#X msg 223 211 \; pd-modules_selection vis 0;
+#X obj 177 38 r \$0-reset;
+#X msg 83 340 \; pd-default_playground.pd obj 200 200 \$1 \$2;
+#X msg 250 171 \; pd-default_playground.pd editmode 1;
+#X obj 64 17 r \$0-create-mono-reverb;
+#X msg 83 235 fx-reverb-mono~;
+#X obj 64 562 s pd-fx-reverb-mono~.pd;
+#X connect 0 0 1 0;
+#X connect 0 0 5 0;
+#X connect 1 0 10 0;
+#X connect 1 1 22 0;
+#X connect 1 2 2 0;
+#X connect 2 0 3 0;
+#X connect 2 0 4 0;
+#X connect 3 0 2 1;
+#X connect 4 0 9 0;
+#X connect 5 0 6 0;
+#X connect 6 1 20 0;
+#X connect 7 0 19 0;
+#X connect 8 0 2 1;
+#X connect 8 0 9 0;
+#X connect 9 0 16 0;
+#X connect 10 0 13 0;
+#X connect 10 1 12 0;
+#X connect 11 0 23 0;
+#X connect 13 0 11 0;
+#X connect 14 0 2 1;
+#X connect 15 0 14 0;
+#X connect 16 0 7 1;
+#X connect 16 1 14 1;
+#X connect 18 0 8 0;
+#X connect 21 0 0 0;
+#X connect 22 0 7 0;
+#X restore 170 157 pd fx-reverb-mono~;
 #X restore 7 38 pd fx;
 #X restore 873 41 pd abs-creation;
 #X obj 3 6 bng 15 250 50 0 open-modules empty MODULES 20 8 0 10 -262144
@@ -771,39 +1156,80 @@
 -1 -1;
 #X obj 3 46 bng 15 250 50 0 \$0-save empty SAVE 20 8 0 10 -262144 -1
 -1;
-#X text 776 213 Pour valider;
-#X text 786 233 Global audio input et output;
-#X text 786 253 Preset;
-#X text 786 273 Mono delay;
-#X text 905 249 | numbox sous slider;
-#X text 905 263 | Nom du module;
-#X text 905 278 | Nom input/output;
+#X text 754 82 Pour valider;
+#X text 764 102 Global audio input et output;
+#X text 764 122 Preset;
+#X text 764 142 Mono delay;
+#X text 883 118 | numbox sous slider;
+#X text 883 132 | Nom du module;
+#X text 883 147 | Nom input/output;
 #X obj 873 9 declare -path abs;
-#X obj 200 39 in-hex~ 1;
-#X obj 198 529 out-hex~ 2;
-#X obj 129 349 fx-del-hex~ 6;
-#X msg 381 503 4 5 6 7 1 8;
-#X text 461 504 octo matrix output;
+#X msg 949 455 4 5 6 7 1 8;
+#X text 1029 456 octo matrix output;
 #X text 455 16 octo matrix output;
 #X msg 375 15 8 7 6 5 4 3;
-#X obj 136 213 fx-disto-hex~ 2;
+#X obj 499 89 control_structure;
+#X obj 201 303 adc~ 1 2 3 4 5 6, f 18;
+#X obj 270 437 dac~ 1 2;
+#X text 79 206 5 : E low;
+#X text 79 231 6 : A;
+#X text 34 108 Inputs;
+#X text 80 108 1 : B;
+#X text 80 133 2 : E high;
+#X text 79 158 3 : D;
+#X text 77 182 4 : G;
+#X obj 270 341 fx-disto-mono~ 7;
+#X floatatom 394 154 5 0 0 0 - - -, f 5;
+#X floatatom 482 145 5 0 0 0 - - -, f 5;
+#X floatatom 595 271 5 0 0 0 - - -, f 5;
+#X obj 394 184 / 127;
+#X obj 490 173 / 127;
+#X obj 595 294 / 127;
+#X obj 394 252 *;
+#X obj 409 205 loadbang;
+#X floatatom 394 304 5 0 0 0 - - -, f 5;
+#X msg 444 229 0.5;
+#X obj 394 280 +;
+#X msg 409 227 49.5;
+#X obj 495 252 *;
+#X obj 510 205 loadbang;
+#X floatatom 495 304 5 0 0 0 - - -, f 5;
+#X msg 510 227 100;
+#X msg 543 228 50;
+#X obj 495 280 -;
+#X floatatom 595 317 5 0 0 0 - - -, f 5;
+#X obj 88 453 fx-reverb-mono~ 16;
+#X obj 517 443 fx-reverb-hex~ 11;
 #X connect 1 0 0 0;
-#X connect 15 0 22 0;
-#X connect 15 1 22 1;
-#X connect 15 2 22 2;
-#X connect 15 3 22 3;
-#X connect 15 4 22 4;
-#X connect 15 5 22 5;
-#X connect 17 0 16 0;
-#X connect 17 1 16 1;
-#X connect 17 2 16 2;
-#X connect 17 3 16 3;
-#X connect 17 4 16 4;
-#X connect 17 5 16 5;
-#X connect 18 0 16 6;
-#X connect 22 0 17 0;
-#X connect 22 1 17 1;
-#X connect 22 2 17 2;
-#X connect 22 3 17 3;
-#X connect 22 4 17 4;
-#X connect 22 5 17 5;
+#X connect 19 0 30 0;
+#X connect 19 1 31 0;
+#X connect 19 2 32 0;
+#X connect 20 0 29 0;
+#X connect 20 1 29 0;
+#X connect 20 2 29 0;
+#X connect 20 3 29 0;
+#X connect 20 4 29 0;
+#X connect 20 5 29 0;
+#X connect 29 0 21 1;
+#X connect 29 0 21 0;
+#X connect 30 0 33 0;
+#X connect 31 0 34 0;
+#X connect 32 0 35 0;
+#X connect 33 0 36 0;
+#X connect 34 0 42 0;
+#X connect 35 0 48 0;
+#X connect 36 0 40 0;
+#X connect 37 0 41 0;
+#X connect 37 0 39 0;
+#X connect 38 0 29 1;
+#X connect 39 0 40 1;
+#X connect 40 0 38 0;
+#X connect 41 0 36 1;
+#X connect 42 0 47 0;
+#X connect 43 0 45 0;
+#X connect 43 0 46 0;
+#X connect 44 0 29 2;
+#X connect 45 0 42 1;
+#X connect 46 0 47 1;
+#X connect 47 0 44 0;
+#X connect 48 0 29 3;

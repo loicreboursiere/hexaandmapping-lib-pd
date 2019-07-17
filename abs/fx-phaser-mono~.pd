@@ -1,0 +1,46 @@
+#N canvas 9 22 537 658 10;
+#X floatatom 233 123 5 0 0 0 speed - -, f 5;
+#X floatatom 232 141 5 0 0 0 depth - -, f 5;
+#X floatatom 232 159 5 0 0 0 feedback - -, f 5;
+#X obj 232 178 hsl 27 15 0 1 0 0 empty empty dry/wet -50 7 0 10 -262144
+-1 -1 1300 1;
+#X obj 134 355 fx-phaser~;
+#X obj 134 380 outlet~;
+#X obj 101 300 inlet~;
+#X obj 449 186 loadbang;
+#X msg 449 207 0.5;
+#X text 255 202 MONO_PHASER;
+#X obj 183 44 inlet speed;
+#X obj 289 40 inlet depth;
+#X obj 381 42 inlet feedback;
+#X obj 487 44 inlet dw;
+#X obj 171 22 r \$1-speed-in;
+#X obj 276 20 r \$1-depth-in;
+#X obj 375 21 r \$1-feeback-in;
+#X obj 474 21 r \$1-dw-in;
+#X obj 118 103 cnv 5 10 4 empty empty INPUT 0 0 0 8 -262144 -66577
+0;
+#X obj 164 103 cnv 5 5 5 empty empty SPEED 0 0 0 8 -262144 -66577 0
+;
+#X obj 215 103 cnv 5 5 5 empty empty DEPTH 0 0 0 8 -262144 -66577 0
+;
+#X obj 264 103 cnv 5 10 4 empty empty FEEDBACK 0 0 0 8 -262144 -66577
+0;
+#X obj 322 103 cnv 5 5 5 empty empty DW 0 0 0 8 -262144 -66577 0;
+#X connect 0 0 4 1;
+#X connect 1 0 4 2;
+#X connect 2 0 4 3;
+#X connect 3 0 4 4;
+#X connect 4 0 5 0;
+#X connect 6 0 4 0;
+#X connect 7 0 8 0;
+#X connect 8 0 3 0;
+#X connect 10 0 0 0;
+#X connect 11 0 1 0;
+#X connect 12 0 2 0;
+#X connect 13 0 3 0;
+#X connect 14 0 0 0;
+#X connect 15 0 1 0;
+#X connect 16 0 2 0;
+#X connect 17 0 3 0;
+#X coords 0 -1 1 1 227 130 2 113 94;

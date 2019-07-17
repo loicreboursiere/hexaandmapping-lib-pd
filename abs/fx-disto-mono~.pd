@@ -1,4 +1,4 @@
-#N canvas 68 82 660 738 10;
+#N canvas 0 0 1280 777 10;
 #X floatatom 66 48 5 -50 50 0 drive - -, f 5;
 #X floatatom 66 65 5 0 1 0 output - -, f 5;
 #X obj 19 127 inlet~;
@@ -12,7 +12,7 @@
 #X obj 120 -98 r \$1-dist-drive-in;
 #X obj 138 -76 inlet drive;
 #X obj 21 -76 inlet saturation;
-#X obj 3 -98 r \$1-dist-sat-in;
+#X obj 6 -91 r \$1-dist-sat-in;
 #X obj 70 7 cnv 5 5 5 empty empty DRV 0 0 0 8 -262144 -66577 0;
 #X obj 24 198 fx-disto~;
 #X connect 0 0 15 2;
