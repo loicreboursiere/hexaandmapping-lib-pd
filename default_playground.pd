@@ -1,4 +1,4 @@
-#N canvas 0 22 1280 681 10;
+#N canvas 67 89 1202 890 10;
 #X declare -path abs;
 #N canvas 0 50 450 300 OSC 0;
 #X obj 95 21 mrpeach/udpreceive 5000;
@@ -21,10 +21,10 @@
 #X obj 1071 8 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X text 1089 9 Global OSC;
-#N canvas 609 166 450 392 abs-creation 0;
+#N canvas 628 219 450 392 abs-creation 1;
 #N canvas 2312 257 243 309 menu 0;
 #X obj 27 74 r open-modules;
-#N canvas 1361 71 606 702 modules_selection 1;
+#N canvas 1137 89 606 702 modules_selection 1;
 #X obj 2 8 cnv 15 600 30 empty empty MODULES 270 12 0 14 -260386 -262144
 0;
 #X obj 2 64 cnv 15 180 15 empty empty FX: 10 8 0 12 -158136 -262144
@@ -73,6 +73,11 @@
 17 7 0 10 -262144 -1 -1;
 #X obj 114 213 bng 15 250 50 0 \$0-create-mono-reverb empty mono-reverb
 17 7 0 10 -262144 -1 -1;
+#X obj 114 261 bng 15 250 50 0 \$0-create-adaptative-delay empty adaptative-delay
+20 7 0 10 -262144 -1 -1;
+#X obj 114 315 send nb_of_instances;
+#X floatatom 114 286 5 0 0 0 - - -, f 5;
+#X connect 26 0 25 0;
 #X restore 26 48 pd modules_selection;
 #X msg 27 95 1;
 #X msg 27 116 \; pd-modules_selection vis \$1;
@@ -94,7 +99,7 @@
 #X obj 83 316 pack s f;
 #X msg 177 60 0;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 1 256 0;
+-262144 -1 -1 2 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -147,7 +152,7 @@
 #X obj 83 316 pack s f;
 #X msg 177 60 0;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 1 256 0;
+-262144 -1 -1 2 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -200,7 +205,7 @@
 #X obj 83 316 pack s f;
 #X msg 177 60 0;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 1 256 0;
+-262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -253,7 +258,7 @@
 #X obj 83 316 pack s f;
 #X msg 177 60 0;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256 0;
+-262144 -1 -1 0 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -309,7 +314,7 @@
 #X obj 83 316 pack s f;
 #X msg 177 60 0;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256 0;
+-262144 -1 -1 0 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -362,7 +367,7 @@
 #X obj 83 316 pack s f;
 #X msg 177 60 0;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256 0;
+-262144 -1 -1 0 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -405,8 +410,8 @@
 #X connect 22 0 7 0;
 #X restore 163 19 pd synth-osc-mono~;
 #X restore 7 58 pd synthesis;
-#N canvas 714 177 450 392 fx 0;
-#N canvas 606 36 671 643 fx-del-mono~ 0;
+#N canvas 163 497 450 392 fx 1;
+#N canvas 695 417 671 643 fx-del-mono~ 0;
 #X msg 64 84 bang;
 #X obj 64 151 t b b b;
 #X obj 162 168 f;
@@ -417,7 +422,7 @@
 #X obj 83 316 pack s f;
 #X msg 177 60 0;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 5 256 0;
+-262144 -1 -1 6 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -470,7 +475,7 @@
 #X obj 83 316 pack s f;
 #X msg 177 60 0;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 4 256 0;
+-262144 -1 -1 4 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -523,7 +528,7 @@
 #X obj 83 316 pack s f;
 #X msg 177 60 0;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 2 256 0;
+-262144 -1 -1 3 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -576,7 +581,7 @@
 #X obj 83 316 pack s f;
 #X msg 177 60 0;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 3 256 0;
+-262144 -1 -1 4 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -629,7 +634,7 @@
 #X obj 83 316 pack s f;
 #X msg 177 60 0;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 6 256 0;
+-262144 -1 -1 6 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -682,7 +687,7 @@
 #X obj 83 316 pack s f;
 #X msg 177 60 0;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 11 256 0;
+-262144 -1 -1 11 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -735,7 +740,7 @@
 #X obj 83 316 pack s f;
 #X msg 177 60 0;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 7 256 0;
+-262144 -1 -1 7 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -788,7 +793,7 @@
 #X obj 119 -395 pack s f;
 #X msg 213 -651 0;
 #X obj 198 -431 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 8 256 0;
+10 -262144 -1 -1 8 256;
 #X obj 100 -324 t b b;
 #X msg 100 -202 loadbang;
 #X obj 127 -300 s SAVE-S;
@@ -841,7 +846,7 @@
 #X obj 83 316 pack s f;
 #X msg 177 60 0;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 10 256 0;
+-262144 -1 -1 11 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -894,7 +899,7 @@
 #X obj 83 316 pack s f;
 #X msg 177 60 0;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 10 256 0;
+-262144 -1 -1 10 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -947,7 +952,7 @@
 #X obj 126 -161 pack s f;
 #X msg 220 -417 0;
 #X obj 205 -197 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 8 256 0;
+10 -262144 -1 -1 8 256;
 #X obj 107 -90 t b b;
 #X msg 107 32 loadbang;
 #X obj 134 -66 s SAVE-S;
@@ -1000,7 +1005,7 @@
 #X obj 83 316 pack s f;
 #X msg 177 60 0;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 11 256 0;
+-262144 -1 -1 11 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -1053,7 +1058,7 @@
 #X obj 126 -161 pack s f;
 #X msg 220 -417 0;
 #X obj 205 -197 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 11 256 0;
+10 -262144 -1 -1 11 256;
 #X obj 107 -90 t b b;
 #X msg 107 32 loadbang;
 #X obj 134 -66 s SAVE-S;
@@ -1106,7 +1111,7 @@
 #X obj 83 316 pack s f;
 #X msg 177 60 0;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 16 256 0;
+-262144 -1 -1 16 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -1148,6 +1153,64 @@
 #X connect 21 0 0 0;
 #X connect 22 0 7 0;
 #X restore 170 157 pd fx-reverb-mono~;
+#N canvas 1000 421 671 643 fx-del-adaptative~ 0;
+#X msg 64 84 bang;
+#X obj 64 151 t b b b;
+#X obj 162 168 f;
+#X obj 191 168 + 1;
+#X obj 162 257 + 1;
+#X obj 223 101 delay 250;
+#X obj 223 123 t b b;
+#X msg 175 81 0;
+#X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+-262144 -1 -1 10 256;
+#X obj 64 387 t b b;
+#X msg 64 509 loadbang;
+#X obj 91 411 s SAVE-S;
+#X obj 64 462 delay 100;
+#X obj 308 290 f;
+#X obj 308 262 loadbang;
+#X obj 162 299 t f f;
+#X msg 223 211 \; pd-modules_selection vis 0;
+#X obj 175 59 r \$0-reset;
+#X msg 250 171 \; pd-default_playground.pd editmode 1;
+#X obj 64 562 s pd-fx-del-adaptative~.pd;
+#X obj 64 17 r \$0-create-adaptative-delay;
+#X msg 83 235 fx-del-adaptative~;
+#X obj 424 268 r nb_of_instances;
+#X floatatom 424 292 5 0 0 0 - - -, f 5;
+#X msg 83 340 \; pd-default_playground.pd obj 200 200 \$1 \$2 \$3;
+#X obj 83 316 pack s f f;
+#X text 151 318 name of patch \, fx-id \, nb_of_channels;
+#X connect 0 0 1 0;
+#X connect 0 0 5 0;
+#X connect 1 0 9 0;
+#X connect 1 1 21 0;
+#X connect 1 2 2 0;
+#X connect 2 0 3 0;
+#X connect 2 0 4 0;
+#X connect 3 0 2 1;
+#X connect 4 0 8 0;
+#X connect 5 0 6 0;
+#X connect 6 1 18 0;
+#X connect 7 0 2 1;
+#X connect 7 0 8 0;
+#X connect 8 0 15 0;
+#X connect 9 0 12 0;
+#X connect 9 1 11 0;
+#X connect 10 0 19 0;
+#X connect 12 0 10 0;
+#X connect 13 0 2 1;
+#X connect 14 0 13 0;
+#X connect 15 0 25 1;
+#X connect 15 1 13 1;
+#X connect 17 0 7 0;
+#X connect 20 0 0 0;
+#X connect 21 0 25 0;
+#X connect 22 0 23 0;
+#X connect 23 0 25 2;
+#X connect 25 0 24 0;
+#X restore 173 221 pd fx-del-adaptative~;
 #X restore 7 38 pd fx;
 #X restore 873 41 pd abs-creation;
 #X obj 3 6 bng 15 250 50 0 open-modules empty MODULES 20 8 0 10 -262144
@@ -1166,11 +1229,9 @@
 #X obj 873 9 declare -path abs;
 #X msg 949 455 4 5 6 7 1 8;
 #X text 1029 456 octo matrix output;
-#X text 455 16 octo matrix output;
-#X msg 375 15 8 7 6 5 4 3;
-#X obj 499 89 control_structure;
-#X obj 201 303 adc~ 1 2 3 4 5 6, f 18;
-#X obj 270 437 dac~ 1 2;
+#X text 1050 232 octo matrix output;
+#X msg 970 231 8 7 6 5 4 3;
+#X obj 765 178 control_structure;
 #X text 79 206 5 : E low;
 #X text 79 231 6 : A;
 #X text 34 108 Inputs;
@@ -1178,58 +1239,72 @@
 #X text 80 133 2 : E high;
 #X text 79 158 3 : D;
 #X text 77 182 4 : G;
-#X obj 270 341 fx-disto-mono~ 7;
-#X floatatom 394 154 5 0 0 0 - - -, f 5;
-#X floatatom 482 145 5 0 0 0 - - -, f 5;
-#X floatatom 595 271 5 0 0 0 - - -, f 5;
-#X obj 394 184 / 127;
-#X obj 490 173 / 127;
-#X obj 595 294 / 127;
-#X obj 394 252 *;
-#X obj 409 205 loadbang;
-#X floatatom 394 304 5 0 0 0 - - -, f 5;
-#X msg 444 229 0.5;
-#X obj 394 280 +;
-#X msg 409 227 49.5;
-#X obj 495 252 *;
-#X obj 510 205 loadbang;
-#X floatatom 495 304 5 0 0 0 - - -, f 5;
-#X msg 510 227 100;
-#X msg 543 228 50;
-#X obj 495 280 -;
-#X floatatom 595 317 5 0 0 0 - - -, f 5;
-#X obj 88 453 fx-reverb-mono~ 16;
-#X obj 517 443 fx-reverb-hex~ 11;
+#X floatatom 660 243 5 0 0 0 - - -, f 5;
+#X floatatom 748 234 5 0 0 0 - - -, f 5;
+#X floatatom 861 360 5 0 0 0 - - -, f 5;
+#X obj 660 273 / 127;
+#X obj 756 262 / 127;
+#X obj 861 383 / 127;
+#X obj 660 341 *;
+#X obj 675 294 loadbang;
+#X floatatom 660 393 5 0 0 0 - - -, f 5;
+#X msg 710 318 0.5;
+#X obj 660 369 +;
+#X msg 675 316 49.5;
+#X obj 761 341 *;
+#X obj 776 294 loadbang;
+#X floatatom 761 393 5 0 0 0 - - -, f 5;
+#X msg 776 316 100;
+#X msg 809 317 50;
+#X obj 761 369 -;
+#X floatatom 861 406 5 0 0 0 - - -, f 5;
+#X obj 304 218 fx-del-hex~ 3;
+#X obj 305 391 fx-disto-hex~ 4;
+#X obj 304 53 in-hex~ 2;
+#X obj 305 535 out-hex~ 2;
+#X obj 729 531 fx-del-adaptative~ 10 6;
+#X text 728 715 Create GUI abs for FX \, created patches should generate
+gui and snd \, which in return should be automatically created;
 #X connect 1 0 0 0;
-#X connect 19 0 30 0;
-#X connect 19 1 31 0;
-#X connect 19 2 32 0;
-#X connect 20 0 29 0;
-#X connect 20 1 29 0;
-#X connect 20 2 29 0;
-#X connect 20 3 29 0;
-#X connect 20 4 29 0;
-#X connect 20 5 29 0;
-#X connect 29 0 21 1;
-#X connect 29 0 21 0;
+#X connect 19 0 27 0;
+#X connect 19 1 28 0;
+#X connect 19 2 29 0;
+#X connect 27 0 30 0;
+#X connect 28 0 31 0;
+#X connect 29 0 32 0;
 #X connect 30 0 33 0;
-#X connect 31 0 34 0;
-#X connect 32 0 35 0;
-#X connect 33 0 36 0;
-#X connect 34 0 42 0;
-#X connect 35 0 48 0;
-#X connect 36 0 40 0;
-#X connect 37 0 41 0;
-#X connect 37 0 39 0;
-#X connect 38 0 29 1;
-#X connect 39 0 40 1;
-#X connect 40 0 38 0;
-#X connect 41 0 36 1;
-#X connect 42 0 47 0;
-#X connect 43 0 45 0;
-#X connect 43 0 46 0;
-#X connect 44 0 29 2;
-#X connect 45 0 42 1;
-#X connect 46 0 47 1;
-#X connect 47 0 44 0;
-#X connect 48 0 29 3;
+#X connect 31 0 39 0;
+#X connect 32 0 45 0;
+#X connect 33 0 37 0;
+#X connect 34 0 38 0;
+#X connect 34 0 36 0;
+#X connect 35 0 46 6;
+#X connect 36 0 37 1;
+#X connect 37 0 35 0;
+#X connect 38 0 33 1;
+#X connect 39 0 44 0;
+#X connect 40 0 42 0;
+#X connect 40 0 43 0;
+#X connect 41 0 46 7;
+#X connect 42 0 39 1;
+#X connect 43 0 44 1;
+#X connect 44 0 41 0;
+#X connect 45 0 46 9;
+#X connect 46 0 47 0;
+#X connect 46 1 47 1;
+#X connect 46 2 47 2;
+#X connect 46 3 47 3;
+#X connect 46 4 47 4;
+#X connect 46 5 47 5;
+#X connect 47 0 49 0;
+#X connect 47 1 49 1;
+#X connect 47 2 49 2;
+#X connect 47 3 49 3;
+#X connect 47 4 49 4;
+#X connect 47 5 49 5;
+#X connect 48 0 46 0;
+#X connect 48 1 46 1;
+#X connect 48 2 46 2;
+#X connect 48 3 46 3;
+#X connect 48 4 46 4;
+#X connect 48 5 46 5;
